@@ -4,9 +4,9 @@
     ...
 }:
 perSystem.devshell.mkShell {
-    name = "hw devshell";
+    name = "enae464-lab04 devshell";
     motd = ''
-        {141}📚 hw{reset} devshell
+        {141}📚 enae464-lab04{reset} devshell
         $(type -p menu &>/dev/null && menu)
     '';
 
@@ -100,6 +100,7 @@ perSystem.devshell.mkShell {
         (python3.withPackages (ps:
             with ps; [
                 # python packages here
+                pandas
                 matplotlib
                 numpy
                 scipy
