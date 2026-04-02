@@ -97,15 +97,16 @@ perSystem.devshell.mkShell {
         texlab
 
         # python
-        (python3.withPackages (ps:
-            with ps; [
+        (python3.withPackages (
+            ps: with ps; [
                 # python packages here
                 pandas
                 matplotlib
                 numpy
                 scipy
                 cartopy
-            ]))
+            ]
+        ))
 
         # font
         pkgs.nerd-fonts.iosevka-term
